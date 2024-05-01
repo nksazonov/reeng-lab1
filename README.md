@@ -1,13 +1,5 @@
-# Sample Hardhat Project
+# Duckies Blockchain project
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+Take a closer look on `contracts/ducklings/...` files. Current implementation has a lot of code smells and is in need of refactoring.
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-GAS_REPORT=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
-```
+This is a code version **BEFORE** refactoring.
