@@ -3,7 +3,6 @@ import 'dotenv/config';
 import '@openzeppelin/hardhat-upgrades';
 import '@nomicfoundation/hardhat-toolbox';
 import '@nomiclabs/hardhat-ethers';
-import 'solidity-docgen';
 import type { HardhatUserConfig } from 'hardhat/config';
 
 const ACCOUNTS = process.env.PRIVATE_KEY === undefined ? [] : [process.env.PRIVATE_KEY];
@@ -14,16 +13,7 @@ const config: HardhatUserConfig = {
   solidity: {
     compilers: [
       {
-        version: '0.8.16',
-        settings: {
-          optimizer: {
-            enabled: true,
-            runs: 200,
-          },
-        },
-      },
-      {
-        version: '0.8.17',
+        version: '0.8.18',
         settings: {
           optimizer: {
             enabled: true,
@@ -59,10 +49,6 @@ const config: HardhatUserConfig = {
         : 'auto',
       accounts: ACCOUNTS,
     },
-  },
-  docgen: {
-    output: 'docs',
-    pages: 'files',
   },
   gasReporter: {
     enabled: process.env.REPORT_GAS !== undefined,
